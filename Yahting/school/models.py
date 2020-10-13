@@ -1,6 +1,8 @@
 from django.db import models
 
 
+
+
 class Position(models.Model):
     position_name = models.CharField(max_length=40)
     position_description = models.CharField(max_length=200)
@@ -51,7 +53,7 @@ class Course(models.Model):
     course_id = models.IntegerField()
     course_price = models.DecimalField(decimal_places=2, max_digits=8)
     course_name = models.CharField(max_length=50)
-    course_description = models.CharField(max_length=200)
+    course_description = models.CharField(max_length=200, default="Course description goes here")
     course_language = models.CharField(max_length=2, choices=LANGUAGES)
     course_location = models.CharField(max_length=2, choices=LOCATION)
     course_start_date = models.DateField()
